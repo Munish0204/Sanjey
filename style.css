@@ -1,4 +1,4 @@
-/* General Reset */
+
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #000000; /* Set entire page background to black */
+    background-color: #000000; 
     color: #fff;
     font-size: 16px;
     line-height: 1.6;
@@ -22,11 +22,10 @@ body {
     height: 100vh;
     padding: 20px;
     background-color: #000;
-    position: relative; /* Keeps elements within the container */
+    position: relative; 
     animation: fadeIn 1s ease-in-out;
 }
 
-/* Container inside Hero */
 .container {
     display: flex;
     justify-content: space-between;
@@ -36,25 +35,13 @@ body {
     margin: 0 auto;
 }
 
-#hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    padding: 20px;
-    background-color: #000;
-    position: relative;
-    animation: fadeIn 1s ease-in-out;
-}
-
-/* Hero-left Image */
 .hero-left {
-    position: fixed; /* Fix the image in place */
-    top: 50px; /* Adjust to move the image down */
-    left: 20px; /* Stick to the left side */
-    width: 400px; /* Adjust the size of the image */
-    z-index: 10; /* Ensure it's above other content */
-    transition: top 0.3s ease-in-out; /* Smooth transition */
+    position: fixed; 
+    top: 50px; 
+    left: 20px; 
+    width: 400px; 
+    z-index: 10; 
+    transition: 
 }
 
 .hero-left img {
@@ -63,16 +50,14 @@ body {
     border-radius: 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-/* Add other sections like 'about' below */
 
 
-/* Hover Effect for Border Animation */
 .hero-left img:hover {
     transform: scale(1.1); 
-    top: 80px;/* Slight zoom effect on hover */
-    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
-    background-size: 400% 400%; /* Expands the gradient effect */
-    animation: glowingBorder 1.5s ease-in-out infinite; /* Smooth glowing effect */
+    top: 80px;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
+    background-size: 400% 400%; 
+    animation: glowingBorder 1.5s ease-in-out infinite; 
 }
 
 .icon-button {
@@ -107,7 +92,7 @@ body {
     align-items: flex-start;
     padding-left: 30px;
     animation: slideInRight 1s ease-in-out;
-    margin-left: 450px; /* Adjust this margin to prevent overlap with the image */
+    margin-left: 450px; 
 }
 
 .hero-right h1 {
@@ -150,10 +135,9 @@ body {
 
 
 /* About Section */
-/* About Section */
 #about {
     padding: 80px 20px;
-    background-color: #000000; /* Set to black */
+    background-color: #000000; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -164,7 +148,7 @@ body {
     margin-left: 50px; 
 }
 
-/* About-right styling */
+
 .about-right {
     flex: 1;
     padding: 20px;
@@ -364,7 +348,7 @@ body {
 @keyframes fadeInUp {
     0% {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(10px);
     }
     100% {
         opacity: 1;
@@ -372,47 +356,26 @@ body {
     }
 }
 
+@keyframes glowingBorder {
+    0% {
+        border: 2px solid rgba(255, 58, 108, 0.5);
+    }
+    50% {
+        border: 2px solid rgba(255, 58, 108, 1);
+    }
+    100% {
+        border: 2px solid rgba(255, 58, 108, 0.5);
+    }
+}
+
 @keyframes pulse {
-    0%, 100% {
+    0% {
         transform: scale(1);
     }
     50% {
-        transform: scale(1.05);
-    }
-}
-
-@keyframes glowingBorder {
-    0% {
-        background-position: 100% 0;
-        box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.8);
-    }
-    50% {
-        background-position: 0 100%;
-        box-shadow: 0 0 30px 15px rgba(255, 255, 255, 0.6);
+        transform: scale(1.1);
     }
     100% {
-        background-position: 100% 0;
-        box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.8);
-    }
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-/* Media Query for Mobile */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .about-right {
-        text-align: center;
+        transform: scale(1);
     }
 }
